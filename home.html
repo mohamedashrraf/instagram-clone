@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/home.css" />
+
+    <title>Instagram</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar mb-5">
+        <div class="container">
+          <div class="logo">
+            <a href="#"> </a>
+          </div>
+          <div class="searchbar">
+            <input type="text" placeholder="Search" />
+          
+          </div>
+          <div class="nav-links">
+            <ul class="nav-group">
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="">
+                  <i class="fab fa-facebook-messenger"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="">
+                  <i class="far fa-compass"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="">
+                  <i class="far fa-heart"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="action">
+                  <div class="profile" onclick="menuToggle()">
+                    <img src="images/a.jpg" alt="user Avatar" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="icons col-lg-2">
+            <div>
+              <a href="home.html">
+                <img src="images/logo.PNG" class="logo" alt="" id="instaLogo" />
+              </a>
+            </div>
+
+            <a href="home.html">
+              <div class="row">
+                <div class="col-6">
+                  <i class="fa-solid fa-house fa-xl"></i>
+                </div>
+                <div class="col-6">
+                  <span>Home</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="search.html">
+              <div class="row">
+                <div class="col-6">
+                  <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                </div>
+                <div class="col-6">
+                  <span>Search</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="explore.html">
+              <div class="row">
+                <div class="col-6">
+                  <i class="fa-regular fa-compass fa-xl"></i>
+                </div>
+                <div class="col-6">
+                  <span>Explore</span>
+                </div>
+              </div>
+            </a>
+
+            <div class="row">
+              <div class="col-6">
+                <a href="home.html">
+                  <i class="fa-brands fa-facebook-messenger fa-xl"></i>
+                </a>
+              </div>
+              <div class="col-6">
+                <span>Messages</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <a href="home.html">
+                  <i class="fa-regular fa-heart fa-xl"></i>
+                </a>
+              </div>
+              <div class="col-6">
+                <span>Notifications</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <i class="fa-regular fa-square-plus fa-xl"></i>
+              </div>
+              <div class="col-6" id="createPost">
+                <span class="open-popup" id="popup-trigger">Create</span>
+
+                <div class="popup" id="popup">
+                  <div class="popup-content">
+                    <span class="close-popup" id="close-popup">&times;</span>
+                    <h3>Drag photos here</h3>
+                    <div class="d-flex justify-content-between mt-5">
+                      <input
+                        type="text"
+                        id="post-input"
+                        placeholder="Share your post"
+                        class="form-control"
+                      />
+                      <button
+                        type="button"
+                        id="post-button"
+                        class="btn btn-outline-primary rounded-pill"
+                      >
+                        Share</button
+                      ><br />
+                    </div>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      id="image-uploader"
+                      draggable="true"
+                      class="text-center m-5"
+                      style="
+                        display: block;
+                        margin: 5px auto;
+                        text-align: center;
+                        color: transparent;
+                      "
+                    />
+
+                    <div id="uploaded-image-container"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="dark">
+              <div class="col-6">
+                <i class="fa-solid fa-moon fa-xl"></i>
+              </div>
+              <div class="col-6">
+                <span>Dark Mode</span>
+              </div>
+            </div>
+            <div class="row" id="logout">
+              <div class="col-6">
+                <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i>
+              </div>
+              <div class="col-6">
+                <span>Log out</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="content col-lg-6">
+            <div class="statuses">
+              <div class="status">
+                <div class="image">
+                  <img src="images/5.jpg" alt="img3" />
+                </div>
+              </div>
+              <div class="status">
+                <div class="image">
+                  <img src="images/6.jpg" alt="img4" />
+                </div>
+              </div>
+              <div class="status">
+                <div class="image">
+                  <img src="images/7.jpg" alt="img5" />
+                </div>
+              </div>
+              <div class="status">
+                <div class="image">
+                  <img src="images/8.jpg" alt="img6" />
+                </div>
+              </div>
+              <div class="status">
+                <div class="image">
+                  <img src="images/cover 6.png" alt="img7" />
+                </div>
+              </div>
+              <div class="status">
+                <div class="image">
+                  <img src="images/cover 7.png" alt="img8" />
+                </div>
+              </div>
+              <div class="status">
+                <div class="image">
+                  <img src="images/5.jpg" alt="img3" />
+                </div>
+              </div>
+            </div>
+
+
+            <div class="container-fluid">
+              <div class="posts">
+                <!--  posts will be added here -->
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="top">
+                <div class="userDetails">
+                  <div class="profilepic">
+                    <div class="profile_img">
+                      <div class="image">
+                        <img src="images/cover 8.png" alt="img8" />
+                      </div>
+                    </div>
+                  </div>
+                  <h3>
+                    mohamed.ashraf
+                    <br />
+                    <span>Cairo, Egypt</span>
+                  </h3>
+                </div>
+                <div>
+                  <span class="dot">
+                    <i class="fa-solid fa-trash" onclick="deletePost(this)"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="imgBx">
+                <img src="images/cover 1.png" alt="post-1" class="cover" />
+              </div>
+              <div class="bottom">
+                <div class="actionBtns">
+                  <div class="left">
+                    <span class="">
+                      <i
+                        class="fa-regular fa-heart fa-xl"
+                        id="like-0"
+                        onclick="addLike(0)"
+                      ></i>
+                    </span>
+                    <i
+                      class="fa-regular fa-comment fa-flip-horizontal fa-xl"
+                    ></i>
+
+                    <i class="fa-regular fa-paper-plane fa-xl"></i>
+                  </div>
+                  <div class="right">
+                    <i class="fa-regular fa-bookmark fa-xl"></i>
+                  </div>
+                </div>
+
+                <span class="likes" id="likee-0">203</span> likes
+
+                <a href="#">
+                  <p class="message">
+                    <b>mohamed.ashraf</b>
+                  </p>
+                </a>
+                <a href="#">
+                  <h6 class="comments">View all 32 comments</h6>
+                </a>
+                <a href="#">
+                  <h5 class="postTime">2 hours ago</h5>
+                </a>
+                <div class="commentsAdded" id="commentsAdded-1"></div>
+                <div class="addComments">
+                  <div class="reaction">
+                    <h3>
+                      <i class="far fa-smile"></i>
+                    </h3>
+                  </div>
+                  <input
+                    type="text"
+                    class="text textComment"
+                    id="textComment-1"
+                    placeholder="Add a comment..."
+                  />
+                  <a class="addComment" onclick="addComment(1)">Post</a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="top">
+                <div class="userDetails">
+                  <div class="profilepic">
+                    <div class="profile_img">
+                      <div class="image">
+                        <img src="images/cover 6.png" alt="img9" />
+                      </div>
+                    </div>
+                  </div>
+                  <h3>
+                    mohamed.ahmed<br />
+                    <span>Asyut, Egypt</span>
+                  </h3>
+                </div>
+                <div>
+                  <span class="dot">
+                    <i class="fa-solid fa-trash" onclick="deletePost(this)"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="imgBx">
+                <img src="images/cover 10.png" alt="post-1" class="cover" />
+              </div>
+              <div class="bottom">
+                <div class="actionBtns">
+                  <div class="left">
+                    <span class="heart">
+                      <span>
+                        <i
+                          class="fa-regular fa-heart fa-xl"
+                          id="like-1"
+                          onclick="addLike(1)"
+                        ></i>
+                      </span>
+                    </span>
+                    <i
+                      class="fa-regular fa-comment fa-flip-horizontal fa-xl"
+                    ></i>
+
+                    <i class="fa-regular fa-paper-plane fa-xl"></i>
+                  </div>
+                  <div class="right">
+                    <i class="fa-regular fa-bookmark fa-xl"></i>
+                  </div>
+                </div>
+
+
+                <span class="likes" id="likee-1">119</span> likes
+
+                <a href="#">
+                  <p class="message">
+                    <b>mohamed.ahmed</b>
+                  </p>
+                </a>
+                <a href="#">
+                  <h6 class="comments">View all 20 comments</h6>
+                </a>
+                <a href="#">
+                  <h5 class="postTime">4 hours ago</h5>
+                </a>
+                <div class="commentsAdded" id="commentsAdded-2"></div>
+                <div class="addComments">
+                  <div class="reaction">
+                    <h3><i class="far fa-smile"></i></h3>
+                  </div>
+                  <input
+                    type="text"
+                    class="text textComment"
+                    id="textComment-2"
+                    placeholder="Add a comment..."
+                  />
+                  <a class="addComment" onclick="addComment(2)">Post</a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="top">
+                <div class="userDetails">
+                  <div class="profilepic">
+                    <div class="profile_img">
+                      <div class="image">
+                        <img src="" alt="img10" />
+                      </div>
+                    </div>
+                  </div>
+                  <h3>
+                    amr-diab<br />
+                    <span>Alexandria, Egypt</span>
+                  </h3>
+                </div>
+                <div>
+                  <span class="dot">
+                    <i class="fa-solid fa-trash" onclick="deletePost(this)"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="imgBx">
+                <img src="images/cover 11.png" alt="post-1" class="cover" />
+              </div>
+              <div class="bottom">
+                <div class="actionBtns">
+                  <div class="left">
+                    <span class="heart">
+                      <i
+                        class="fa-regular fa-heart fa-xl"
+                        id="like-2"
+                        onclick="addLike(2)"
+                      ></i>
+                    </span>
+                    <i
+                      class="fa-regular fa-comment fa-flip-horizontal fa-xl"
+                    ></i>
+
+                    <i class="fa-regular fa-paper-plane fa-xl"></i>
+                  </div>
+                  <div class="right">
+                    <i class="fa-regular fa-bookmark fa-xl"></i>
+                  </div>
+                </div>
+
+                <span class="likes" id="likee-2">184</span> likes
+
+                <a href="#">
+                  <p class="message">
+                    <b>amr-diab</b> Nature
+                    <span>#love</span>
+                    <span>#2021</span>
+                  </p>
+                </a>
+                <a href="#">
+                  <h6 class="comments">View all 25 comments</h6>
+                </a>
+                <a href="#">
+                  <h5 class="postTime">9 hours ago</h5>
+                </a>
+                <div class="commentsAdded" id="commentsAdded-3"></div>
+
+                <div class="addComments">
+                  <div class="reaction">
+                    <h3>
+                      <i class="far fa-smile"></i>
+                    </h3>
+                  </div>
+                  <input
+                    type="text"
+                    class="text textComment"
+                    id="textComment-3"
+                    placeholder="Add a comment..."
+                  />
+                  <a class="addComment" onclick="addComment(3)">Post</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="list col-lg-4">
+            <div class="card">
+              <h6>Suggested for you</h6>
+              <div class="top">
+                <div class="userDetails">
+                  <div class="profilepic">
+                    <div class="profile_img">
+                      <div class="image">
+                        <img src="images/a.jpg" alt="img12" />
+                      </div>
+                    </div>
+                  </div>
+                  <h3>
+                    sara_mahmoud<br />
+                    <span>Follows You</span>
+                  </h3>
+                </div>
+                <div>
+                  <a href="#" class="follow">follow </a>
+                </div>
+              </div>
+              <div class="top">
+                <div class="userDetails">
+                  <div class="profilepic">
+                    <div class="profile_img">
+                      <div class="image">
+                        <img src="images/cover 2.png" alt="img13" />
+                      </div>
+                    </div>
+                  </div>
+                  <h3>
+                    Abdelrahman-Mohamed<br />
+                    <span>Follows You</span>
+                  </h3>
+                </div>
+                <div>
+                  <a href="#" class="follow">follow </a>
+                </div>
+              </div>
+              <div class="top">
+                <div class="userDetails">
+                  <div class="profilepic">
+                    <div class="profile_img">
+                      <div class="image">
+                        <img src="images/cover 3.png" alt="img14" />
+                      </div>
+                    </div>
+                  </div>
+                  <h3>
+                    Sally.mostafa<br />
+                    <span>Followed by Amr Diab</span>
+                  </h3>
+                </div>
+                <div>
+                  <a href="#" class="follow">follow</a>
+                </div>
+              </div>
+              <div class="top">
+                <div class="userDetails">
+                  <div class="profilepic">
+                    <div class="profile_img">
+                      <div class="image">
+                        <img src="images/cover 7.png" alt="img15" />
+                      </div>
+                    </div>
+                  </div>
+                  <h3>
+                    mohamed.salah<br />
+                    <span>Followed by Sally.mostafa</span>
+                  </h3>
+                </div>
+                <div>
+                  <a href="#" class="follow">follow </a>
+                </div>
+              </div>
+              <div class="top">
+                <div class="userDetails">
+                  <div class="profilepic">
+                    <div class="profile_img">
+                      <div class="image">
+                        <img
+                          src="images/cover 4.png"
+                          alt="img16"
+                          class="cover"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <h3>
+                    hany-saad<br />
+                    <span>Followed by Ahmed Ashraf</span>
+                  </h3>
+                </div>
+                <div>
+                  <a href="#" class="follow">follow </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+              <a class="footer-section" href="#">About</a>
+              <a class="footer-section" href="#">Help</a>
+              <a class="footer-section" href="#">API</a>
+              <a class="footer-section" href="#">Jobs</a>
+              <a class="footer-section" href="#">Privacy</a>
+              <a class="footer-section" href="#">Terms</a>
+              <a class="footer-section" href="#">Press</a>
+              <br />
+              <a class="footer-section" href="#">Locations</a>
+              <a class="footer-section" href="#">Language</a>
+              <a class="footer-section" href="#">Meta Verfied</a>
+              <a
+                class="footer-section"
+                href="#"
+                id="deleteAcc"
+                onclick="deleteAccount()"
+                >Delete Account</a
+              >
+              <br /><br />
+              <span class="footer-section"> © 2023 INSTAGRAM FROM META </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <img src="" alt="" />
+
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

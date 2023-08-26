@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="images/icon.png"/>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/signup.css" />
+  </head>
+
+  <body class="bg-light">
+    <main class="d-flex flex-column align-items-center">
+      <div class="page">
+        <div class="header text-center">
+          <div class="logo"><img src="images/Instagram_logo.png" /></div>
+          <p>Sign up to see photos and videos from your friends.</p>
+          <button class="btn btn-primary">
+            <i class="fab fa-facebook-square"></i> Log in with Facebook
+          </button>
+          <div class="d-flex align-items-center mt-3">
+            <hr class="flex-grow-1 m-0" />
+            <p class="mx-3 mb-0">OR</p>
+            <hr class="flex-grow-1 m-0" />
+          </div>
+        </div>
+        <div class="container">
+          <form action="" class="text-center">
+            <div class="input-container">
+              <input type="email" id="emailInput" placeholder="Email" />
+              <span class="icon" id="emailIcon"><i class="fa-regular fa-circle-xmark"></i></span>
+            </div>
+
+            <div class="input-container">
+              <input type="text" id="nameInput" placeholder="Full Name" />
+              <span class="icon" id="nameIcon"><i class="fa-regular fa-circle-xmark"></i></span>
+            </div>
+
+            <div class="input-container">
+              <input type="text" id="usernameInput" placeholder="Username" />
+              <span class="icon" id="usernameIcon"><i class="fa-regular fa-circle-xmark"></i></span>
+            </div>
+
+            <div class="input-container">
+              <input
+                type="password"
+                id="passwordInput"
+                placeholder="Password"
+              />
+              <span class="iconPass" id="passwordIcon"><i class="fa-regular fa-circle-xmark"></i></span>
+              <img class="show-password" src="images/icons8-eye-48.png" />
+            </div>
+            <button type="button" class="btn btn-primary btn-block" id="signupBtn" onclick="storeValue()">
+              Sign up
+            </button>
+            <span id="validLogin" style="color: red;"></span>
+          </form>
+
+          <ul class="list-unstyled text-center mb-3">
+            <li>By signing up, you agree to our</li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Data Policy</a></li>
+            <li>and</li>
+            <li><a href="">Cookies Policy</a>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="option mt-4">
+        <p>Have an account? <a href="index.html">Log in</a></p>
+      </div>
+      <div class="otherapps text-center mt-3">
+        <p>Get the app.</p>
+        <button class="btn btn-dark">
+          <img src="images/google-play.png" alt="" />
+        </button>
+        <button class="btn btn-dark">
+          <img src="images/microsoft.png" alt="" />
+        </button>
+      </div>
+      <div class="footer mt-auto">
+        <ul class="list-inline text-center mb-1">
+          <li class="list-inline-item"><a href="">Meta</a></li>
+          <li class="list-inline-item"><a href="">About</a></li>
+          <li class="list-inline-item"><a href="">Blog</a></li>
+          <li class="list-inline-item"><a href="">Jobs</a></li>
+          <li class="list-inline-item"><a href="">Help</a></li>
+          <li class="list-inline-item"><a href="">API</a></li>
+          <li class="list-inline-item"><a href="">Privcy</a></li>
+          <li class="list-inline-item"><a href="">Terms</a></li>
+          <li class="list-inline-item"><a href="">Top Accounts</a></li>
+          <li class="list-inline-item"><a href="">Location</a></li>
+          <li class="list-inline-item"><a href="">Instagram Lite</a></li>
+          <li class="list-inline-item"><a href="">Theads</a></li>
+          <li class="list-inline-item">
+            <a href="">Contact Uploading & Non-Users</a>
+          </li>
+          <li class="list-inline-item"><a href="">Meta Verified</a></li>
+        </ul>
+        <p class="mb-0 text-muted">© 2023 Instagram from Meta</p>
+      </div>
+    </main>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/signup.js"></script>
+  </body>
+</html>

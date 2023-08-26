@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/icon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/home.css" />
+
+    <title>Instagram</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar mb-5">
+        <div class="container">
+          <div class="logo">
+            <a href="#"> </a>
+          </div>
+          <div class="searchbar">
+            <input type="text" placeholder="Search" />
+           
+          </div>
+          <div class="nav-links">
+            <ul class="nav-group">
+              <li class="nav-item">
+                <a href="#">
+                  <i class="fas fa-home"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="">
+                  <i class="fab fa-facebook-messenger"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="">
+                  <i class="far fa-compass"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="">
+                  <i class="far fa-heart"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="action">
+                  <div class="profile" onclick="menuToggle()">
+                    <img src="images/a.jpg" alt="user Avatar" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="icons col-lg-2">
+            <div>
+              <a href="home.html">
+                <img src="images/logo.PNG" class="logo" alt="" />
+              </a>
+            </div>
+
+            <a href="home.html">
+              <div class="row">
+                <div class="col-6">
+                  <i class="fa-solid fa-house fa-xl"></i>
+                </div>
+                <div class="col-6">
+                  <span>Home</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="search.html">
+              <div class="row">
+                <div class="col-6">
+                  <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                </div>
+                <div class="col-6">
+                  <span>Search</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="explore.html">
+              <div class="row">
+                <div class="col-6">
+                  <i class="fa-regular fa-compass fa-xl"></i>
+                </div>
+                <div class="col-6">
+                  <span>Explore</span>
+                </div>
+              </div>
+            </a>
+            <div class="row">
+              <div class="col-6">
+                <a href="home.html">
+                  <i class="fa-brands fa-facebook-messenger fa-xl"></i>
+                </a>
+              </div>
+              <div class="col-6">
+                <span>Messages</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <a href="home.html">
+                  <i class="fa-regular fa-heart fa-xl"></i>
+                </a>
+              </div>
+              <div class="col-6">
+                <span>Notifications</span>
+              </div>
+            </div>
+            <a href="home.html">
+              <div class="row">
+              <div class="col-6">
+                <i class="fa-regular fa-square-plus fa-xl"></i>
+              </div>
+              <div class="col-6" id="createPost">
+                <span class="open-popup" id="popup-trigger">Create</span>
+
+                <div class="popup" id="popup">
+                  <div class="popup-content">
+                    <span class="close-popup" id="close-popup">&times;</span>
+                    <h3>Drag photos here</h3>
+                    <div class="d-flex justify-content-between mt-5">
+                      <input
+                        type="text"
+                        id="post-input"
+                        placeholder="Share your post"
+                        class="form-control"
+                      />
+                      <button
+                        type="button"
+                        id="post-button"
+                        class="btn btn-outline-primary rounded-pill"
+                      >
+                        Share</button
+                      ><br />
+                    </div>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      id="image-uploader"
+                      draggable="true"
+                      class="text-center m-5"
+                      style="
+                        display: block;
+                        margin: 5px auto;
+                        text-align: center;
+                        color: transparent;
+                      "
+                    />
+
+                    <div id="uploaded-image-container"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+
+            <div class="row" id="dark">
+              <div class="col-6">
+                <i class="fa-solid fa-moon fa-xl"></i>
+              </div>
+              <div class="col-6">
+                <span>Dark Mode</span>
+              </div>
+            </div>
+            <div class="row" id="logout">
+              <div class="col-6">
+                <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i>
+              </div>
+              <div class="col-6">
+                <span>Log out</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="content col-lg-10">
+            <div class="row">
+              <div class="col-lg-10">
+                <input
+                  type="text"
+                  class="text searchInp pb-3"
+                  id="searchInput"
+                  placeholder="Find Someone..."
+                  style="border-bottom: 1px solid #ddd"
+                />
+              </div>
+              <div class="col-lg-2">
+                <a
+                  class="btn btn-outline-secondary rounded-pill searchBtn"
+                  id="searchButton"
+                  >Search</a
+                >
+              </div>
+            </div>
+            <div class="row" id="userList"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
