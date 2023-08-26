@@ -15,17 +15,25 @@
     <header>
       <nav class="navbar mb-5">
         <div class="container">
-          <div class="logo">
-            <a href="#"> </a>
-          </div>
-          <div class="searchbar">
-            <input type="text" placeholder="Search" />
-          
-          </div>
+          <div class="logo"> <img src="images/instalogo.png" style="width: 60px; margin-top: -9px;" alt=""></div>
           <div class="nav-links">
             <ul class="nav-group">
               <li class="nav-item">
-                <a href="#">
+                <div class="row" id="dark2">
+                  <i class="fa-solid fa-moon fa-xl" ></i>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="row" id="logout2">
+                  <i
+                    class="fa-solid fa-arrow-right-from-bracket fa-xl"
+                    style=" cursor: pointer;"
+                  ></i>
+                </div>
+              </li>
+              
+              <li class="nav-item">
+                <a href="home.html">
                   <i class="fas fa-home"></i>
                 </a>
               </li>
@@ -35,15 +43,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
+                <a href="explore.html">
                   <i class="far fa-compass"></i>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
+                <a href="home.html">
                   <i class="far fa-heart"></i>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="search.html">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </li>
+
               <li class="nav-item">
                 <div class="action">
                   <div class="profile" onclick="menuToggle()">
@@ -222,7 +236,6 @@
               </div>
             </div>
 
-
             <div class="container-fluid">
               <div class="posts">
                 <!--  posts will be added here -->
@@ -271,7 +284,7 @@
                     <i class="fa-regular fa-paper-plane fa-xl"></i>
                   </div>
                   <div class="right">
-                    <i class="fa-regular fa-bookmark fa-xl"></i>
+                    <i class="fa-regular fa-bookmark fa-xl" id="save-1" onclick="savePost(1)"></i>
                   </div>
                 </div>
 
@@ -348,10 +361,9 @@
                     <i class="fa-regular fa-paper-plane fa-xl"></i>
                   </div>
                   <div class="right">
-                    <i class="fa-regular fa-bookmark fa-xl"></i>
+                    <i class="fa-regular fa-bookmark fa-xl" id="save-2" onclick="savePost(2)"></i>
                   </div>
                 </div>
-
 
                 <span class="likes" id="likee-1">119</span> likes
 
@@ -422,7 +434,7 @@
                     <i class="fa-regular fa-paper-plane fa-xl"></i>
                   </div>
                   <div class="right">
-                    <i class="fa-regular fa-bookmark fa-xl"></i>
+                    <i class="fa-regular fa-bookmark fa-xl" id="save-3" onclick="savePost(3)"></i>
                   </div>
                 </div>
 
