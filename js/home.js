@@ -241,13 +241,13 @@ dark.addEventListener("click", () => {
     allElements.forEach(element => {
       element.style.backgroundColor = "black";
       element.style.color = "white";
-      instaLogo.src = "images/insta_white.png";
+      //instaLogo.src = "images/insta_white.png";
     });
   } else {
     allElements.forEach(element => {
       element.style.backgroundColor = "";
       element.style.color = ""; // Reset to default color
-      instaLogo.src = "images/logo.PNG";
+      //instaLogo.src = "images/logo.PNG";
     });
   }
 });
