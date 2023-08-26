@@ -54,7 +54,7 @@ postButton.addEventListener('click', () => {
                 </div>
                 <div>
                   <span class="dot">
-                    <i class="fas fa-ellipsis-h" onclick="deletePost(this)" ></i>
+                    <i class="fa-solid fa-trash" onclick="deletePost(this)" ></i>
                   </span>
                 </div>
               </div>
