@@ -486,7 +486,6 @@ display: none;
 @media screen and (max-width: 1000px) {
 .content {
 	width: 100%;
-	background: #fafafa;
 }
 .navbar {
     display: block;
@@ -502,8 +501,12 @@ display: none;
     margin-top: 30px;
 }
 }
+.nav-group .nav-item{
+    margin-right: 17px;
+}
 
 @media screen and (max-width: 600px) {
+    
 .container {
 	width: 100% !important;
 }
@@ -512,19 +515,20 @@ display: none;
     margin-bottom: 30px;
 }
 .navbar .container {
-	padding: 15px 10px !important;
+	padding: 0px 10px !important;
+    margin-bottom: -10px;
 }
 
 .icons {
     display: none;
 }
 .content {
-	margin-top: 4px;
+	margin-top: 58px;
 	min-width: 100%;
 }
 
 .statuses {
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 .content .card {
